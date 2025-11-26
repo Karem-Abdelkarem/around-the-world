@@ -1,14 +1,30 @@
-import "./index.css";
-import "./App.css";
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Country from "./pages/Country";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
-  return (
-    <>
-      <h1 className="text-3xl font-bold underline text-red-600 font-inter">
-        Hello world!
-      </h1>
-    </>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      Component: Layout,
+      ErrorBoundary: ErrorPage,
+      children: [
+        {
+          index: true,
+          Component: Home,
+        },
+        {
+          path: ":country",
+          Component: Country,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -1,6 +1,8 @@
+import { Link } from "react-router";
+
 const CountryCard = ({ name, population, region, capital, flag }) => {
   return (
-    <a href="#">
+    <Link to={name}>
       <div className="h-full gap-4 rounded-md bg-white p-3 pb-9 shadow-md xl:w-[264px] dark:bg-gray-800">
         <img
           className="mb-4 h-40 w-full rounded-md"
@@ -24,7 +26,7 @@ const CountryCard = ({ name, population, region, capital, flag }) => {
           </p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 export default CountryCard;
