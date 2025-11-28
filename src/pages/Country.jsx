@@ -11,7 +11,7 @@ const Country = () => {
       {isError && <ShowMessage message="Something went wrong" />}
       {isLoading && <ShowMessage message="Loading countries data..." />}
       {!isError && !isLoading && (
-        <section>
+        <section className="pb-8">
           <Link
             to="/"
             className="mb-16 inline-block rounded-md bg-white p-3 md:mb-20 dark:bg-gray-800 dark:fill-white"
