@@ -6,23 +6,28 @@ import Country from "./pages/Country";
 import ErrorPage from "./pages/ErrorPage";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        Component: Layout,
+        ErrorBoundary: ErrorPage,
+        children: [
+          {
+            index: true,
+            Component: Home,
+          },
+          {
+            path: ":country",
+            Component: Country,
+          },
+        ],
+      },
+    ],
     {
-      path: "/",
-      Component: Layout,
-      ErrorBoundary: ErrorPage,
-      children: [
-        {
-          index: true,
-          Component: Home,
-        },
-        {
-          path: ":country",
-          Component: Country,
-        },
-      ],
+      basename: "/around-the-world",
     },
-  ]);
+  );
 
   return <RouterProvider router={router} />;
 }
