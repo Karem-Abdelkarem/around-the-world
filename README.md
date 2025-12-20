@@ -118,10 +118,11 @@ src/
 🌐 API Used
 REST Countries API
 🔗 https://restcountries.com/
+```
 
-🙋‍♂️ About the Developer
-Created by Kareem Abdelkarem
-Frontend Developer | React.js | TailwindCSS
-🔗 GitHub: https://github.com/Karem-Abdelkarem
-🔗 LinkedIn: (https://www.linkedin.com/in/kareem-mohamed-155304345/)
+## 🙋‍♂️ About the Developer
+- Created by Kareem Abdelkarem
+- Frontend Developer | React.js | TailwindCSS
+- 🔗 GitHub: https://github.com/Karem-Abdelkarem
+- 🔗 LinkedIn: (https://www.linkedin.com/in/kareem-mohamed-155304345/)
 
